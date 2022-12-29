@@ -116,7 +116,7 @@ int main() {
         auto max_frequency = *std::max_element(frequencies.begin(),  frequencies.end());
         while (true){
             for (auto frequency: frequencies){
-                std::vector<double> x  = range(0, 1, 0.000001);
+                std::vector<double> x  = range(0, 1, 0.001);
                 std::vector<double> y_harmonic = my_transform(x,
                                                               [=](double time){return harmonical(time, frequency);});
                 auto y_digital = my_transform(x,
